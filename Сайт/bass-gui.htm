@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bas-gui.css">
+    <title>Каталог Бас Гитар</title>
+</head>
+<body>
+<header>
+    <h1>Каталог Бас Гитар</h1>
+</header>
+<main>
+   <nav>
+    <ul>
+        <li><a href="riffstar.htm">Главная</a></li>
+        <li><a href="sved.htm">Контакты</a></li>
+        <li><a href="korzina.htm">Корзина</a></li>
+    </ul>
+</nav> <div class="slider">
+        <div class="slides">
+            <a href="AcousticCat.htm">
+            <div class="slide">
+                <img src="image/akustika-1645775998.jpg" alt="Описание изображения">
+                <div class="slide-text">
+                    <h2>Акустические гитары</h2>
+                    <p>Нажмите сюда, если хотите перейти в каталог с Акустическими гитарами</p>
+                </div>
+            </div>
+        </a>
+        <a href="electron.htm">
+            <div class="slide">
+                <img src="image/pikachu.jpg" alt="Басс Гитара">
+                <div class="slide-text">
+                    <h2>электрогитары</h2>
+                    <p>Нажмите сюда, если хотите перейти в каталог с Басс гитарами</p>
+                </div>
+            </div>
+</a>
+</main>
+<div class="container">
+    <div class="card">
+        <img src="image/Fender-Precision-Bass-Thinline-Japan-PBAC-950-FL-1990-guitar-shop-25-1024x1024-2120131015-fotor-bg-remover-2024092485453.png" alt="Fender Precision Bass">
+        <h2>Fender Precision Bass</h2>
+        <p class="price">Цена: 40,000руб</p>
+        <button class="add-to-cart" data-product='{"name": "Fender Precision Bass", "price": 50000}'>Добавить в корзину</button>
+    </div>
+
+    <div class="card">
+        <img src="image/ibanez-sr300e-pw-4172216697-transformed.png" alt="Ibanez SR300E-IPT">
+        <h2>Ibanez SR Series</h2>
+        <p class="price">Цена: 50,000руб</p>
+        <button class="add-to-cart" data-product='{"name": "Ibanez SR Series", "price": 40000}'>Добавить в корзину</button>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 Каталог Бас Гитар. Все права защищены.</p>
+</footer>
+<script>
+    // Функция для добавления товара в корзину
+    function addToCart(product) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${product.name} добавлена в корзину!`);
+        }
+
+        // Обработчик события для кнопок "Добавить в корзину"
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const product = JSON.parse(this.getAttribute('data-product'));
+                addToCart(product);
+            });
+        });
+</script>
+
+</body>
+</html>

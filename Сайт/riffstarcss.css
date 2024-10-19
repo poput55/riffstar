@@ -1,0 +1,313 @@
+/* Основные стили */
+body {
+    font-family: 'Roboto', sans-serif; /* Изменен шрифт на Arial */
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea; /* Светло-серый фон */
+    color: #333333; /* Темно-серый текст */
+    line-height: 1.6; /* Увеличена высота строки для лучшей читаемости */
+}
+
+/* Заголовок */
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+}
+nav {
+    background: #444; /* Цвет фона навигации */
+    color: #fff; /* Цвет текста по умолчанию */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Убедитесь, что отступы по умолчанию убраны */
+    display: flex; /* Для горизонтального расположения элементов списка */
+    justify-content: center; /* Центрирование элементов */
+}
+
+nav ul li {
+    margin: 0 15px; /* Отступы между элементами списка */
+    position: relative; /* Для позиционирования полоски */
+    padding: 5px 0; /* Отступы сверху и снизу для текста */
+    color: #fff; /* Цвет текста */
+    transition: color 0.3s ease; /* Переход для цвета текста */
+}
+
+nav ul li:hover {
+    color: #ffcc00; /* Изменение цвета текста при наведении */
+}
+
+nav ul li::after {
+    content: ""; /* Создание псевдоэлемента */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 50%; /* Центрирование полоски */
+    bottom: -5px; /* Позиция полоски снизу */
+    width: 0; /* Начальная ширина полоски */
+    height: 2px; /* Высота полоски */
+    background-color: #ffcc00; /* Цвет полоски */
+    transition: width 0.3s ease, left 0.3s ease; /* Переходы для ширины и позиции */
+}
+
+nav ul li:hover::after {
+    width: 100%; /* Ширина полоски при наведении */
+    left: 0; /* Сдвиг полоски влево для полного охвата текста */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h3 {
+    color: black;
+    transition: transform 0.3s ease, color 0.3s ease; /* Переходы для трансформации и цвета */
+    animation: pulse 1s infinite; /* Анимация пульсации при загрузке */
+}
+
+h3:hover {
+    transform: scale(1.1); /* Увеличение заголовка при наведении */
+    color: #4a4a4a; /* Изменение цвета при наведении */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* Исходный размер */
+    }
+    50% {
+        transform: scale(1.05); /* Увеличение на 5% */
+    }
+}
+
+
+/* Основной контент */
+main {
+    padding: 2rem;
+}
+
+/* Заголовки */
+ h2 {
+    color: #6a6a6a; /* Темно-серый цвет заголовков */
+    margin-bottom: 1rem; /* Увеличены отступы снизу */
+}
+
+h1{
+    color: #ffffff; /* Темно-серый цвет заголовков */
+    margin-bottom: 1rem; /* Увеличены отступы снизу */
+    font-size: 2.5em;
+}
+
+/* Продукты */
+.product {
+    background-color: #ffffff; /* Белый фон для продуктов */
+    border: 1px solid #d0d0d0; /* Светло-серая рамка */
+    border-radius: 8px; /* Уменьшен радиус */
+    padding: 1.5rem; /* Увеличены отступы */
+    margin: 1.5rem 0; /* Увеличено расстояние между продуктами */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавные переходы */
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Легкий подъем при наведении */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 8px; /* Увеличен радиус */
+}
+
+.product h3 {
+    font-size: 1.5em; /* Увеличен размер заголовка */
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1em; /* Уменьшен размер текста */
+    color: #6c757d; /* Тусклый серый цвет текста */
+}
+
+/* Кнопки */
+
+button {
+    background: #6c757d; /* Исходный цвет фона */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем рамку */
+    padding: 10px 20px; /* Отступы */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background 0.3s ease, transform 0.1s ease; /* Переходы для фона и трансформации */
+    font-size: 16px; /* Размер шрифта */
+}
+
+button:hover {
+    background: #5a6268; /* Темно-серый при наведении */
+    color: #ffcc00; /* Изменение цвета текста при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+button:active {
+    transform: translateY(1px); /* Легкое движение вниз при нажатии */
+}
+
+ .mapa{
+    position: absolute;
+    left: 400px;
+    border-radius: 15px;
+    display: flex;
+ }
+
+ .maping{
+    background-color: #ffffff; /* Белый фон для секции */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+ }
+
+.maping h1{
+    color:#333;
+}
+
+/* Слайдер */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slide img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Увеличен радиус */
+}
+
+/* Кнопки слайдера */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-10%);
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+/* Информационная секция */
+.info-section {
+    background-color: #ffffff; /* Белый фон для секции */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.info-section h2 {
+    color: #4a4a4a; /* Темно-серый цвет заголовка */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.info-section h3 {
+    color: #333333; /* Темно-серый цвет подзаголовка */
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-section p {
+    color: #444444; /* Темно-серый текст */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.info-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 1rem;
+}
+
+.info-section ul li {
+    margin-bottom: 0.5rem;
+    color: #444444; /* Темно-серый текст */
+}
+
+/* Изображение в информационной секции */
+.info-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Подвал */
+footer {
+    background-color: #4a4a4a; /* Темно-серый фон */
+    color: #ffffff; /* Белый текст */
+    text-align: center;
+    padding: 1rem 0; /* Увеличенные отступы */
+    position: relative;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    position: absolute;
+    right:40px;
+    top: 290px;
+    height: 100px;
+    
+}
+
+h4{
+    font-size: 20px;
+    color: black;
+}
+

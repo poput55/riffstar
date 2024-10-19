@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин гитар RiffStar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="riffstarcss.css">
+</head>
+<body>
+    <header>
+        <h1>Магазин гитар MusicHouse</h1>
+        <img class="logo" src="image/image-Photoroom.png">
+        <nav>
+            <ul>
+                <li><a href="riffstar2.htm">Аккаунт</a></li>
+                <li><a href="catalog.htm">Каталог</a></li>
+                <li><a href="korzina.htm" onclick="showCart()">Корзина</a></li>
+                <li><a href="sved.htm">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="info" class="info-section">
+            <h2>Добро пожаловать в MusicHouse!</h2>
+            <p>Мы - ваш надежный магазин гитар, предлагающий широкий выбор акустических, электрических и бас-гитар. Наша цель - помочь вам найти идеальный инструмент, который будет вдохновлять вас на создание музыки.</p>
+            <h2>Советы по выбору гитары:</h2>
+            <ul>
+                <li>Определите, какой тип гитары вам нужен: акустическая, электрическая или бас-гитара.</li>
+                <li>Обратите внимание на размер гитары, особенно если вы новичок.</li>
+                <li>Попробуйте несколько моделей, чтобы понять, какая из них вам больше нравится.</li>
+                <li>Не забывайте о качестве: выбирайте инструменты от проверенных производителей.</li>
+            </ul>
+            
+            <img src="image/chell1.png" alt="Гитары" class="info-image">
+        </section>
+        <section id="catalog">
+            <h2>Рекомендованные Гитары</h2>
+            <div class="slider">
+                <div class="slides" id="slides">
+                    <div class="slide">
+                        <a href="AcousticCat.htm">
+                            <h3>Акустические гитары</h3>
+                        </a>
+                        <img src="image/pngwing.com (24).png" alt="Акустическая гитара">
+                        <p>MRTINEZ MFG-AS</p>
+                        <p>Цена: 20000 руб.</p>
+                        <button onclick="addToCart('Акустическая гитара MRTINEZ MFG-AS', 20000)">Добавить в корзину</button>
+                    </div>
+                    <div class="slide">
+                        <a href="electron.htm">
+                        <h3>Электрогитары</h3>
+                        </a>
+                        <img src="image/CNT72998-2750103159.png" alt="Электрогитара">
+                        <p>Solar Guitars A2.6C G2</p>
+                        <p>Цена: 35000 руб.</p>
+                        <button onclick="addToCart('Электрогитара Solar Guitars A2.6C G2', 35000)">Добавить в корзину</button>
+                    </div>
+                    <div class="slide">
+                        <a href="bass-gui.htm">
+                        <h3>Бас-гитары</h3>
+                        </a>
+                        <img src="image/ibanez-sr300e-pw-4172216697-transformed.png" alt="Бас-гитара">
+                        <p>Ibanez SR300E-IPT</p>
+                        <p>Цена: 37999 руб.</p>
+                        <button onclick="addToCart('Бас-гитара Ibanez SR300E-IPT', 37999)">Добавить в корзину</button>
+                    </div>
+                </div>
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+            
+            </div>
+        </section>
+        <section class="info-section">
+            <h2>Доставка и возврат</h2>
+            <p>Мы предлагаем быструю доставку по всей стране. Если вы не удовлетворены покупкой, вы можете вернуть товар в течение 30 дней.</p>
+        </section>
+        <section class="maping">
+            <h1>Где нас найти</h1>
+            <div class="mapa" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/dom_muzyki/220996290815/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Дом музыки</a><a href="https://yandex.ru/maps/10278/batumi/category/music_store/184105910/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Музыкальный магазин в Батуми</a><iframe src="https://yandex.ru/map-widget/v1/?ll=41.631820%2C41.701214&mode=search&oid=220996290815&ol=biz&z=10.48" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+    </main>
+        </section>
+         
+    <footer>
+        <p>© 2024 Магазин гитар RiffStar. Все права защищены.</p>
+    </footer>
+    <script src="riffstarjs.js">
+    </script>
+
+</body>
+</html>

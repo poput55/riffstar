@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог электрогитар</title>
+    <link rel="stylesheet" href="electroncss.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Каталог электрогитар</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="riffstar.htm">Главная</a></li>
+            <li><a href="sved.htm">Контакты</a></li>
+            <li><a href="korzina.htm">Корзина</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="slider">
+            <div class="slides">
+                <a href="AcousticCat.htm">
+                <div class="slide">
+                    <img src="image/akustika-1645775998.jpg" alt="Описание изображения">
+                    <div class="slide-text">
+                        <h2>Акустические гитары</h2>
+                        <p>Нажмите сюда, если хотите перейти в каталог с Акустическими гитарами</p>
+                    </div>
+                </div>
+            </a>
+            <a href="bass-gui.htm">
+                <div class="slide">
+                    <img src="image/bass_guitar.jpg" alt="Басс Гитара">
+                    <div class="slide-text">
+                        <h2>Басс гитары</h2>
+                        <p>Нажмите сюда, если хотите перейти в каталог с Басс гитарами</p>
+                    </div>
+                </div>
+            </a>
+            </div>
+            </div>
+
+        <h2>Наши электрогитары</h2>
+
+        <div class="product-grid">
+            <div class="product">
+                <img src="image/CNT72998-2750103159.png" alt="Электрогитара 1">
+                <h3>Электрогитара Solar Guitars A2.6C G2</h3>
+                <p>Цена: 45,000 руб.</p>
+                <button class="add-to-cart" data-product='{"name": "Электрогитара Solar Guitars A2.6C G2", "price": 45000}'>Добавить в корзину</button>
+            </div>
+            <div class="product">
+                <img src="image/gibson-les-paul-classic-ebony_1_GIT0049473-000-920742920-fotor-bg-remover-20240923232123.png" alt="Электрогитара 2">
+                <h3>Электрогитара Gibson Les Paul</h3>
+                <p>Цена: 75,000 руб.</p>
+                <button class="add-to-cart" data-product='{"name": "Электрогитара Gibson Les Paul", "price": 75000}'>Добавить в корзину</button>
+            </div>
+            <!-- Добавьте больше товаров здесь, если нужно -->
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 Ваш сайт. Все права защищены.</p>
+    </footer>
+    <script>
+        // Функция для добавления товара в корзину
+        function addToCart(product) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${product.name} добавлена в корзину!`);
+        }
+
+        // Обработчик события для кнопок "Добавить в корзину"
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const product = JSON.parse(this.getAttribute('data-product'));
+                addToCart(product);
+            });
+        });
+    </script>
+</body>
+</html>

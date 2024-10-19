@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог акустических гитар</title>
+    <link rel="stylesheet" href="acoustic.css"> <!-- Подключите ваш CSS файл -->
+</head>
+<body>
+    <header>
+        <h1>Каталог акустических гитар</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="korzina.htm">Корзина</a></li>
+            <li><a href="catalog.htm">Каталог</a></li>
+            <li><a href="sved.htm">Контакты</a></li>
+            <li><a href="riffstar.htm">Рекомендации</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="slider">
+            <div class="slides">
+                <a href="electron.htm">
+                <div class="slide">
+                    <img src="image/pikachu.jpg" alt="Описание изображения">
+                    <div class="slide-text">
+                        <h2>Электрогитары</h2>
+                        <p>Нажмите сюда, если хотите перейти в каталог с Электрогитарами</p>
+                    </div>
+                </div>
+            </a>
+            <a href="bass-gui.htm">
+                <div class="slide">
+                    <img src="image/bass_guitar.jpg" alt="Басс Гитара">
+                    <div class="slide-text">
+                        <h2>Басс гитары</h2>
+                        <p>Нажмите сюда, если хотите перейти в каталог с Басс гитарами</p>
+                    </div>
+                </div>
+            </a>
+            </div>
+            </div>
+
+        <h2>Наши акустические гитары</h2>
+
+        <div class="product-grid">
+            <div class="product">
+                <img src="image/Yamaha.png" alt="Гитара 1">
+                <h3>Гитара Yamaha F310</h3>
+                <p>Цена: 15,000 руб.</p>
+                <button class="add-to-cart" data-product='{"name": "Гитара Yamaha F310", "price": 15000}'>Добавить в корзину</button>
+            </div>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="image/pngwing.com (24).png" alt="Гитара 2">
+                    <h3>MRTINEZ MFG-AS</h3>
+                    <p>Цена: 30,000 руб.</p>
+                    <button class="add-to-cart" data-product='{"name": "MRTINEZ MFG-AS", "price": 30000}'>Добавить в корзину</button>
+                </div>
+            <!-- Добавьте больше товаров здесь, если нужно -->
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 Ваш сайт. Все права защищены.</p>
+    </footer>
+    <script>
+
+function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    console.log('Adding product to cart:', product);
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${product.name} добавлена в корзину!`);
+}
+
+
+// Обработчик события для кнопок "Добавить в корзину"
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function() {
+        const product = JSON.parse(this.getAttribute('data-product'));
+        addToCart(product);
+    });
+});
+    </script>
+</body>
+</html>

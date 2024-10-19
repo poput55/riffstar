@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Магазин гитар RiffStar</title>
+    <link rel="stylesheet" href="korzinacss.css">
+</head>
+<body>
+    <header>
+        <h1>Корзина</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="catalog.htm">Каталог</a></li>
+            <li><a href="sved.htm">Контакты</a></li>
+            <li><a href="riffstar.htm">Рекомендации</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Ваши товары в корзине</h2>
+
+        <div class="cart-container">
+            <div id="cartItems">Ваша корзина пуста.</div>
+            <p id="total">Общая сумма: 0 руб.</p>
+        <div class="butt">
+            <button onclick="clearCart()">Очистить корзину</button>
+            <button onclick="purchaseItems()">Купить</button>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 Ваш сайт. Все права защищены.</p>
+    </footer>
+    <script src="korzinajs.js"></script>     
+</body>
+</html>
